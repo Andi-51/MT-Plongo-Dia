@@ -12,7 +12,7 @@ const Hero = () => {
             
           </motion.div>
           <motion.div initial={{ opacity:0, x:-80 }} animate={{ opacity:1, x:0 }} viewport={{ once:true }} transition={{ duration:0.4, delay:0.25 }}>
-            <h2 className="font-semibold text-md md:text-lg lg:text-2xl my-4">
+            <h2 className="font-semibold text-md md:text-lg lg:text-2xl my-4 overflow-x-hidden">
               Kenalin — Martabak Pedas Spesial Perpaduan kulit martabak renyah dengan isian tahu berbumbu rahasia, ditambah topping pilihan yang melimpah. Setiap potongannya punya kombinasi pedas, gurih, dan crispy yang bikin susah berhenti ngunyah.
             </h2>
           </motion.div>

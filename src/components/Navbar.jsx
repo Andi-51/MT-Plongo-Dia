@@ -13,10 +13,9 @@ const Navbar = () => {
   return (
     // WRAPPER NAVBAR
     <div
-      className="
+      className="navbar
         sticky top-0 z-50
-        bg-blue-500 md:bg-blue/30
-        md:backdrop-blur-md
+        bg-blue-500
         shadow-sm border-b border-black/5
       "
     >

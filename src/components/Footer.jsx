@@ -3,6 +3,13 @@ import Logo from "../assets/Logo.png";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
+
+    const phoneNumber = "6282298854788";
+    const phoneNumber2 = "6285719074851";
+    const message = "Halo Teh, Aku dari kelas {kelas} mau order martabak pedas nya dong";
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappURL2 = `https://wa.me/${phoneNumber2}?text=${encodeURIComponent(message)}`;
+
   return (
     <div className="bg-neutral-900 text-white py-16">
       <div className="grid md:grid-cols-3 mx-auto px-6 gap-4">
@@ -30,11 +37,11 @@ const Footer = () => {
             <h1 className="font-semibold text-white text-xl">Kontak Kami</h1>
             <ul className="text-neutral-400 mt-4 flex flex-col">
                 <li className="py-1">
-                    <a href="https://wa.me/+" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center"><FaWhatsapp className="mx-2"/> Whatsapp (admin1)</a></li>
+                    <a href={whatsappURL} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center"><FaWhatsapp className="mx-2"/> Whatsapp (Iqrima)</a></li>
                 <li className="py-1">
-                    <a href="https://wa.me/+" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center" ><FaWhatsapp className="mx-2"/>Whatsapp (admin2)</a></li>
+                    <a href={whatsappURL2} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center" ><FaWhatsapp className="mx-2"/>Whatsapp (Herliana)</a></li>
                 <li className="py-1">
-                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center" ><FaInstagram className="mx-2"/>Instagram (admin ig)</a></li>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center" ><FaInstagram className="mx-2"/>Instagram</a></li>
             </ul>
         </div>
 
