@@ -5,7 +5,7 @@ const Order = () => {
 
     const phoneNumber = "6282298854788";
     const message = "Halo Teh, Aku dari kelas {kelas} mau order martabak pedas nya dong";
-    const whatsappUrl = "https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}";
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <section id="order" className="bg-blue-50 min-h-screen flex items-center justify-center px-6 py-16">
@@ -43,7 +43,7 @@ const Order = () => {
             </div>
 
             {/* Button */}
-            <a href={whatsappUrl}>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition duration-300 shadow-md hover:shadow-lg">
                 Pesan Sekarang
                 </button>
