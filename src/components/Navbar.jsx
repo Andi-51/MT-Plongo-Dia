@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-// import Logo from "../assets/Logo.png";
+import Logo from "../assets/Logo.png";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -26,7 +26,7 @@ const Navbar = () => {
         <motion.div initial={{ opacity:0 , x:-60 }} animate={{ opacity:1 , x:0 }} viewport={{ once:true }} transition={{ duration:0.8, delay:0.2 }}>
         <a href="#scrollKeAtas" className="cursor-pointer scroll-smooth">
         <div className="flex items-center gap-2" >
-          <img src="#" alt="Logo" className="max-w-[80px] max-h-[80px] px-2" />
+          <img src={Logo} alt="Logo" className="max-w-[80px] max-h-[80px] px-2" />
           <h1
             className={`
             font-bold transition-opacity duration-300 py-4
@@ -67,7 +67,7 @@ const Navbar = () => {
           }
         >
           <div className="flex items-center gap-2">
-          <img src="#" alt="Logo" className="max-w-[80px] max-h-[80px] px-2" />
+          <img src={Logo} alt="Logo" className="max-w-[80px] max-h-[80px] px-2" />
           <h1 className="text-3xl font-bold mx-0.5 my-5">MT Polongo Dia</h1>
           </div>
 
