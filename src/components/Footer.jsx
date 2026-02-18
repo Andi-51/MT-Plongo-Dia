@@ -28,9 +28,9 @@ const Footer = () => {
         <div className="flex flex-col items-center">
             <h1 className="font-semibold text-white text-xl">Kontak Kami</h1>
             <ul className="text-neutral-400 mt-4">
-                <li className="py-1"><a href="https://wa.me/+" target="_blank" rel="noopener noreferrer">Whatsapp (Andi)</a></li>
-                <li className="py-1"><a href="https://wa.me/+" target="_blank" rel="noopener noreferrer" >Whatsapp (Alda)</a></li>
-                <li className="py-1"><a href="https://wa.me/+" target="_blank" rel="noopener noreferrer" >Whatsapp (Sindi)</a></li>
+                <li className="py-1"><a href="https://wa.me/+" target="_blank" rel="noopener noreferrer">Whatsapp (admin1)</a></li>
+                <li className="py-1"><a href="https://wa.me/+" target="_blank" rel="noopener noreferrer" >Whatsapp (admin2)</a></li>
+                <li className="py-1"><a href="https://wa.me/+" target="_blank" rel="noopener noreferrer" >Whatsapp (admin3 kalo ada)</a></li>
             </ul>
         </div>
 
