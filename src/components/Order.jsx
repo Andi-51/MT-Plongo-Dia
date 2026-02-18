@@ -43,7 +43,7 @@ const Order = () => {
             </div>
 
             {/* Button */}
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition duration-300 shadow-md hover:shadow-lg">
                 Pesan Sekarang
                 </button>
