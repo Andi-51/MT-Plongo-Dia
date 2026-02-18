@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import dummyImg from "../assets/dummyImg.png";
 import Gallery3 from "../assets/Gallery3.jpeg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Order = () => {
+
+    useEffect(() => {
+        AOS.init({
+            once:true,
+            offset:100
+        });
+    }, []);
 
     const phoneNumber = "6282298854788";
     const message = "Halo Teh, Aku dari kelas {kelas} mau order martabak pedas nya dong";
@@ -10,7 +19,7 @@ const Order = () => {
 
   return (
     <section id="order" className="bg-blue-50 min-h-screen flex items-center justify-center px-6 py-16">
-      <div className="max-w-6xl w-full bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-blue-100">
+      <div data-aos="zoom-in-down" data-aos-duration="400" data-aos-delay="200" className="max-w-6xl w-full bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-blue-100">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex justify-center">
             <img
@@ -21,7 +30,7 @@ const Order = () => {
           </div>
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold text-blue-700 leading-tight">
-              Martabak Telur Premium
+              Martabak Pedas
             </h2>
             <p className="text-gray-600 text-lg">
               Kulit renyah, isian melimpah, dan selalu dibuat fresh setiap pesanan.

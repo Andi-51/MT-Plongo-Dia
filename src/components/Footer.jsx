@@ -1,5 +1,6 @@
 import React from "react";
-// import Logo from "../assets/Logo.png";
+import Logo from "../assets/Logo.png";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -8,11 +9,11 @@ const Footer = () => {
         <div className="flex flex-col items-center text-center">
 
           <div className="flex items-center gap-4">
-            <img src="" alt="Logo" className="max-w-[80px] max-h-[80px]" />
+            <img src={Logo} alt="Logo" className="max-w-[80px] max-h-[80px]" />
             <h1 className="font-bold text-2xl md:text-3xl">MT Polongo Dia</h1>
           </div>
-          <p className="mt-4 text-neutral-400">
-            Sensasi pedas yang bikin nagih dan beda dari yang lain.
+          <p className="mt-4 text-neutral-400 text-md">
+            Sekali Coba, Langsung Ketagihan Bukan sekadar martabak biasa — ini camilan pedas yang punya karakter rasa kuat dan sensasi tekstur yang beda dari yang lain.
           </p>
         </div>
 
@@ -27,10 +28,13 @@ const Footer = () => {
 
         <div className="flex flex-col items-center">
             <h1 className="font-semibold text-white text-xl">Kontak Kami</h1>
-            <ul className="text-neutral-400 mt-4">
-                <li className="py-1"><a href="https://wa.me/+" target="_blank" rel="noopener noreferrer">Whatsapp (admin1)</a></li>
-                <li className="py-1"><a href="https://wa.me/+" target="_blank" rel="noopener noreferrer" >Whatsapp (admin2)</a></li>
-                <li className="py-1"><a href="https://wa.me/+" target="_blank" rel="noopener noreferrer" >Whatsapp (admin3 kalo ada)</a></li>
+            <ul className="text-neutral-400 mt-4 flex flex-col">
+                <li className="py-1">
+                    <a href="https://wa.me/+" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center"><FaWhatsapp className="mx-2"/> Whatsapp (admin1)</a></li>
+                <li className="py-1">
+                    <a href="https://wa.me/+" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center" ><FaWhatsapp className="mx-2"/>Whatsapp (admin2)</a></li>
+                <li className="py-1">
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center" ><FaInstagram className="mx-2"/>Instagram (admin ig)</a></li>
             </ul>
         </div>
 

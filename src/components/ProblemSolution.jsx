@@ -1,22 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ProblemSolution = () => {
+
+    useEffect(() => {
+        AOS.init({
+            once:true,
+            offset:50
+        });
+    }, []);
+
   return (
     <div className="bg-white">
-        <div className='md:flex grid grid-cols-1 items-center justify-between max-w-[1080px] mx-auto my-12'>
-            <div className='py-8'>
-                <h1 className='font-bold text-neutral-800 text-2xl md:text-3xl lg:text-4xl text-center md:text-left'>Pernah Ngerasa Gini?</h1>
-                <div className='mt-6 text-lg mx-6'>
-                    <p className='py-0.5'>❌ Bosen sama makanan yang itu itu aja</p>
-                    <p className='py-0.5'>❌ Teks</p>
-                    <p className='py-0.5'>❌ Teks</p>
-                </div>
-            </div>
-            <div className='p-12 bg-blue-500 shadow-blue-700 shadow-sm rounded-xl mx-6 my-8 lg:mx-0 max-w-[450px]'>
-                <h1 className='font-bold text-2xl py-2'>... Solusinya</h1>
-                <p className='font-semibold text-lg py-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem mollitia quis quo explicabo unde dolores ex officia dolor quisquam in facilis rerum, magnam quidem ad incidunt tempore sapiente possimus odio!</p>
-                <p className='font-semibold text-md py-2'>Teks tambahan (opsional)</p>
-            </div>
+        <div className='flex flex-col items-center justify-between max-w-[1080px] mx-auto my-12'>
+            <h1 data-aos="fade-right" data-aos-duration="500" data-aos-delay="100" className='font-bold text-neutral-800 text-2xl md:text-3xl lg:text-4xl text-center mx-4'>Ngidam Pedas Tapi Pengen yang Beda?</h1>
+            <p data-aos="fade-left" data-aos-duration="500" data-aos-delay="300" className='mx-4 text-center text-md md:text-lg py-6 font-semibold'>Kalau camilan biasa udah bikin bosen, saatnya cobain sensasi baru yang lebih berani rasa dan lebih seru teksturnya.</p>
         </div>
     </div>
   )

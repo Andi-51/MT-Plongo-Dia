@@ -6,15 +6,14 @@ const Hero = () => {
   return (
     <div className="min-h-screen w-full bg-blue-500 flex items-center text-amber-50" id="scrollKeAtas">
       <div className="mx-auto max-w-[1240px] w-full px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-        {/* TEXT */}
         <div className="text-center md:text-left">
           <motion.div initial={{ opacity:0, y:-80 }} animate={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.4, delay:0.2 }}>
             <h1 className="font-bold text-4xl lg:text-5xl">Martabak Pedas</h1>
             
           </motion.div>
           <motion.div initial={{ opacity:0, x:-80 }} animate={{ opacity:1, x:0 }} viewport={{ once:true }} transition={{ duration:0.4, delay:0.25 }}>
-            <h2 className="font-semibold text-2xl lg:text-4xl my-4">
-              Teks (Tagline)
+            <h2 className="font-semibold text-md md:text-lg lg:text-2xl my-4">
+              Kenalin — Martabak Pedas Spesial Perpaduan kulit martabak renyah dengan isian tahu berbumbu rahasia, ditambah topping pilihan yang melimpah. Setiap potongannya punya kombinasi pedas, gurih, dan crispy yang bikin susah berhenti ngunyah.
             </h2>
           </motion.div>
           <div className="mt-8 md:w-fit">
