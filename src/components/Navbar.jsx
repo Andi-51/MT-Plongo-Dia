@@ -1,26 +1,91 @@
-import React from 'react'
+import React, { useState } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+// import Logo from "../assets/Logo.png";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
-  return (
-    <nav className='bg-red-600'>
-        <div className='flex items-center justify-between max-w-[1240px] bg-red-600 h-16 mx-auto'>
-            <div className='flex gap-x-2'>
-                <img src="#" alt="Logo" />
-                <h1 className='text-amber-100 font-bold text-2xl'>Mt Plongo Dia</h1>
-            </div>
-            <div className='flex'>
-                <ul className='flex flex-row'>
-                    <li className='px-4 font-semibold text-amber-50'>test</li>
-                    <li className='px-4 font-semibold text-amber-50'>test</li>
-                    <li className='px-4 font-semibold text-amber-50'>test</li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            
-        </div>
-    </nav>
-  )
-}
+  const [nav, setNav] = useState(false);
 
-export default Navbar
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+  return (
+    // WRAPPER NAVBAR
+    <div
+      className="
+        sticky top-0 z-50
+        bg-blue-500 md:bg-blue/30
+        md:backdrop-blur-md
+        shadow-sm border-b border-black/5
+      "
+    >
+      {/* CONTAINER */}
+      <div className="flex justify-between items-center px-4 mx-auto max-w-[1240px] text-amber-50 h-20">
+        {/* LOGO / TITLE */}
+        <motion.div initial={{ opacity:0 , x:-60 }} animate={{ opacity:1 , x:0 }} viewport={{ once:true }} transition={{ duration:0.8, delay:0.2 }}>
+        <a href="#scrollKeAtas" className="cursor-pointer scroll-smooth">
+        <div className="flex items-center gap-2" >
+          <img src="#" alt="Logo" className="max-w-[80px] max-h-[80px] px-2" />
+          <h1
+            className={`
+            font-bold transition-opacity duration-300 py-4
+            text-2xl md:text-3xl
+            ${nav ? "opacity-0 md:opacity-100" : "opacity-100"}
+          `}
+          >
+            MT Polongo Dia
+          </h1>
+        </div>
+        </a>
+        </motion.div>
+        {/* MENU DESKTOP */}
+        <ul className="hidden md:flex font-semibold">
+          <motion.li initial={{ opacity:0, y:-60 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.5, delay:0.2 }} className="p-4 cursor-pointer hover:text-amber-100">
+            <a href="#features">Kelebihan</a>
+          </motion.li>
+          <motion.li initial={{ opacity:0, y:-60 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.5, delay:0.25 }} className="p-4 cursor-pointer hover:text-amber-100 ">
+            <a href="#gallery">Gallery</a>
+          </motion.li>
+          <motion.li initial={{ opacity:0, y:-60 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.5, delay:0.3 }} className="p-4 cursor-pointer hover:text-amber-100">
+            <a href="#order">Order</a>
+          </motion.li>
+        </ul>
+        {/* HAMBURGER ICON */}
+        <div
+          onClick={handleNav}
+          className="block md:hidden cursor-pointer z-50"
+        >
+          {nav ? <AiOutlineClose size={26} /> : <AiOutlineMenu size={26} />}
+        </div>
+        {/* MOBILE MENU */}
+        <div
+          className={
+            nav
+              ? "fixed left-0 top-0 w-[70%] h-full bg-blue-500 shadow-lg ease-in-out duration-300 z-40"
+              : "fixed left-[-100%] top-0 w-[70%] h-full ease-in-out duration-300"
+          }
+        >
+          <div className="flex items-center gap-2">
+          <img src="#" alt="Logo" className="max-w-[80px] max-h-[80px] px-2" />
+          <h1 className="text-3xl font-bold mx-0.5 my-5">MT Polongo Dia</h1>
+          </div>
+
+          <ul className="uppercase p-4 font-semibold">
+            <li className="p-4 border-b cursor-pointer">
+              <a href="#features" onClick={handleNav}>Kelebihan</a>
+            </li>
+            <li className="p-4 border-b cursor-pointer">
+              <a href="#gallery" onClick={handleNav}>Gallery</a>
+            </li>
+            <li className="p-4 cursor-pointer">
+               <a href="#order" onClick={handleNav}>Order</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
