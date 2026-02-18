@@ -1,5 +1,5 @@
 import React from "react";
-import Gallery3 from "../assets/Gallery3.jpeg";
+import Gallery3 from "../assets/Gallery3Updated.png";
 import { motion } from "framer-motion";
 
 const Hero = () => {
