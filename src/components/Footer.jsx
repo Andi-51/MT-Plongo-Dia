@@ -5,7 +5,7 @@ import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 const Footer = () => {
 
     const phoneNumber = "6282298854788";
-    const phoneNumber2 = "6285719074851";
+    const phoneNumber2 = "628131303";
     const message = "Halo Teh, Aku dari kelas {kelas} mau order martabak pedas nya dong";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     const whatsappURL2 = `https://wa.me/${phoneNumber2}?text=${encodeURIComponent(message)}`;
