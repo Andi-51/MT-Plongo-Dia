@@ -41,7 +41,7 @@ const Footer = () => {
                 <li className="py-1">
                     <a href={whatsappURL2} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center" ><FaWhatsapp className="mx-2"/>Whatsapp (Herliana)</a></li>
                 <li className="py-1">
-                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center" ><FaInstagram className="mx-2"/>Instagram</a></li>
+                    <a href="https://www.instagram.com/martabaktahu_pd" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center" ><FaInstagram className="mx-2"/>Instagram</a></li>
             </ul>
         </div>
 
